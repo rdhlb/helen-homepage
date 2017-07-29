@@ -45,6 +45,197 @@ body
 .slide
 	height: 100vh
 	width: 100%
+	display: flex
+
+.page-header
+	flex-basis: 50%
+	width: 50%
+	background-color: #010101
+	color: #ffffff
+
+.page-header__wrapper
+	position: relative
+	box-sizing: border-box
+	height: 100%
+	display: flex
+	flex-direction: column
+	padding-top: 3em
+	padding-bottom: 3em
+	margin-left: 3em
+	margin-right: 3em
+
+.header-photo
+	background-color: #dae5e7
+	height: 100%
+	flex-basis: 50%
+	width: 50%
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover //don't forget to apply polyfill to project
+
+.menu
+	line-height: 1
+	margin: 0
+	margin-bottom: auto
+	font-size: 1em
+	&__list
+		position: relative
+		display: flex
+		margin: 0
+		padding: 0
+		flex-wrap: wrap
+		list-style-type: none
+	&__item
+		display: block
+		margin: 0
+		margin-bottom: 1em
+		margin-right: 65px
+	&__link
+		display: block
+		cursor: pointer
+		user-select: none
+		text-align: center
+		text-decoration: none
+		color: #ffffff
+		text-transform: uppercase
+		font-weight: 900
+		transition: color 0.3s;
+		&:hover
+			color: #f0c1c1
+
+.page-header
+	&__greeting
+		font-family: $second-font
+		text-transform: uppercase
+		font-size: 1.5em
+		margin: 0
+		line-height: 1.5
+	&__about-me
+		font-family: $second-font
+		text-transform: uppercase
+		font-size: 2.25em
+		margin: 0
+		line-height: 1.2
+		span
+			color: $accent
+
+.social-links
+	margin-top: auto
+	display: flex
+
+.social-link
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 40px
+	height: 40px
+	margin-right: 15px
+	border-radius: 35%
+	svg
+		fill: darken(#35363a, 10%)
+	&--fb
+		background-color: #81b9fe
+	&--be
+		background-color: #7dd7f3
+	&--tg
+		background-color: #7df3e9
+	&__text
+		position: absolute
+		width: 1px
+		height: 1px
+		margin: -1px
+		padding: 0
+		overflow: hidden
+		clip: rect(0,0,0,0)
+		border: 0
+
+.scroll
+	position: absolute
+	display: block
+	bottom: 70px
+	right: -60px
+	//transform: rotate(-90deg)
+	line-height: 1
+	color: $accent
+	font-size: 1.5em
+	font-family: $second-font
+
+.scroll__text
+	transform: rotate(-90deg)
+
+.scroll__wheel
+	display: block
+	position: relative
+	border-radius: 10px
+	background-color: $accent
+	transform: translateY(-60px)
+	width: 2px
+	height: 8px
+	top: 4px
+	margin-left: auto
+	margin-right: auto
+
+.scroll__wheel
+	animation-name: drop
+	animation-duration: 1s
+	animation-timing-function: linear
+	animation-delay: 0s
+	animation-iteration-count: infinite
+	animation-play-state: running
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+	30%
+		top: 10px
+		opacity: 1
+	100%
+		top: 25px
+		opacity: 0
+
+.page-footer
+	display: flex
+	flex-direction: column
+	background-color: #010101
+	color: #ffffff
+	height: 100%
+	flex-basis: 50%
+	width: 50%
+	&__contacts
+		display: flex
+
+.menu--footer
+	font-size: 1.5em
+	margin-top: auto
+
+.menu__list--footer
+	flex-direction: column
+	.menu__item
+		margin-right: 0
+
+
+.footer-photo
+	background-color: #dae5e7
+	height: 100%
+	flex-basis: 50%
+	width: 50%
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.slide__project
+	flex-basis: 50%
+	width: 50%
+
+.slide__picture
+	flex-basis: 50%
+	width: 50%
 	background-color: red
+
+.slide__picture--color-lime
+	background-color: #bceed6
 
 @import "media" // Всегда в конце

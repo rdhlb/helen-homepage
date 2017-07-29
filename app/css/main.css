@@ -458,7 +458,280 @@ body {
 .slide {
   height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-header {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%;
+  background-color: #010101;
+  color: #ffffff; }
+
+.page-header__wrapper {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin-left: 3em;
+  margin-right: 3em; }
+
+.header-photo {
+  background-color: #dae5e7;
+  height: 100%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%; }
+  .header-photo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.menu {
+  line-height: 1;
+  margin: 0;
+  margin-bottom: auto;
+  font-size: 1em; }
+  .menu__list {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    list-style-type: none; }
+  .menu__item {
+    display: block;
+    margin: 0;
+    margin-bottom: 1em;
+    margin-right: 65px; }
+  .menu__link {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+    .menu__link:hover {
+      color: #f0c1c1; }
+
+.page-header__greeting {
+  font-family: "ProximaNova", "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 0;
+  line-height: 1.5; }
+
+.page-header__about-me {
+  font-family: "ProximaNova", "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.25em;
+  margin: 0;
+  line-height: 1.2; }
+  .page-header__about-me span {
+    color: #ff3127; }
+
+.social-links {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.social-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  -webkit-border-radius: 35%;
+          border-radius: 35%; }
+  .social-link svg {
+    fill: #1d1d1f; }
+  .social-link--fb {
+    background-color: #81b9fe; }
+  .social-link--be {
+    background-color: #7dd7f3; }
+  .social-link--tg {
+    background-color: #7df3e9; }
+  .social-link__text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
+
+.scroll {
+  position: absolute;
+  display: block;
+  bottom: 70px;
+  right: -60px;
+  line-height: 1;
+  color: #ff3127;
+  font-size: 1.5em;
+  font-family: "ProximaNova", "Roboto", sans-serif; }
+
+.scroll__text {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.scroll__wheel {
+  display: block;
+  position: relative;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #ff3127;
+  -webkit-transform: translateY(-60px);
+      -ms-transform: translateY(-60px);
+          transform: translateY(-60px);
+  width: 2px;
+  height: 8px;
+  top: 4px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.scroll__wheel {
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running; }
+
+@-webkit-keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0; }
+  30% {
+    top: 10px;
+    opacity: 1; }
+  100% {
+    top: 25px;
+    opacity: 0; } }
+
+@keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0; }
+  30% {
+    top: 10px;
+    opacity: 1; }
+  100% {
+    top: 25px;
+    opacity: 0; } }
+
+.page-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #010101;
+  color: #ffffff;
+  height: 100%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%; }
+  .page-footer__contacts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.menu--footer {
+  font-size: 1.5em;
+  margin-top: auto; }
+
+.menu__list--footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .menu__list--footer .menu__item {
+    margin-right: 0; }
+
+.footer-photo {
+  background-color: #dae5e7;
+  height: 100%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%; }
+  .footer-photo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.slide__project {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%; }
+
+.slide__picture {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 50%;
   background-color: red; }
+
+.slide__picture--color-lime {
+  background-color: #bceed6; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
