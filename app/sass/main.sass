@@ -139,14 +139,21 @@ body
 	height: 40px
 	margin-right: 15px
 	border-radius: 35%
+	transition: background-color .3s
 	svg
 		fill: darken(#35363a, 10%)
 	&--fb
 		background-color: #81b9fe
+		&:hover
+			background-color: darken(#74aef6, 5%)
 	&--be
 		background-color: #7dd7f3
+		&:hover
+			background-color: darken(#6bd1f0, 5%)
 	&--tg
 		background-color: #7df3e9
+		&:hover
+			background-color: darken(#67efe3, 5%)
 	&__text
 		position: absolute
 		width: 1px
@@ -298,6 +305,7 @@ body
 	position: absolute
 	width: 70px
 	height: 70px
+	z-index: 10
 	&:hover
 		&::before
 			transform: scale(1)
@@ -335,23 +343,60 @@ body
 		clip: rect(0,0,0,0)
 		border: 0
 
+.btn--center
+	top: 50%
+	transform: translateY(-50%)
+
 .slide__picture
 	position: relative
-	display: flex
-	align-items: center
 	flex-basis: 50%
 	width: 50%
 	height: 100%
 	box-sizing: border-box
 	padding-left: 30px
-	background-repeat: no-repeat
-	background-position: 230px center
+	//background-repeat: no-repeat
+	//background-position: 230px center
+	overflow: hidden
+	img
+		position: absolute
+		z-index: 1
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		box-shadow: 0px 6px 16px 2px rgba(96,198,149,0.26)
 
 .slide__picture--project-1
 	background-color: #bceed6
-	background-size: 800px
+	//background-size: 800px
+	img
+		width: 452px
+		height: 564px
 
 .slide__picture--project-2
 	background-color: #8fcbe6
+	img
+		width: 642px
+		height: 380px
+		box-shadow: none
+
+.slide__picture--project-3
+	background-color: #fbff95
+	img
+		width: 452px
+		height: 620px
+
+.slide__picture--project-4
+	background-color: #7079ef
+	img
+		width: 710px
+		height: 410px
+		box-shadow: none
+
+.slide__picture--project-5
+	background-color: #ff8983
+	img
+		width: 540px
+		height: 530px
+		box-shadow: 0px 6px 16px 2px rgba(194,66,59,1)
 
 @import "media" // Всегда в конце

@@ -8,5 +8,5 @@ const changeImgToBackground = (elementId) => {
 
 changeImgToBackground('header-photo');
 changeImgToBackground('footer-photo');
-changeImgToBackground('project-1');
+//changeImgToBackground('project-1');
 
