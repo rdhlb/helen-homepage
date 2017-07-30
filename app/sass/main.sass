@@ -102,7 +102,11 @@ body
 		font-weight: 900
 		transition: color 0.3s;
 		&:hover
-			color: #f0c1c1
+			color: $accent-light
+
+.menu__item--current
+	.menu__link
+		color: $accent
 
 .page-header
 	&__greeting
@@ -152,33 +156,31 @@ body
 
 .scroll
 	position: absolute
-	display: block
 	bottom: 70px
 	right: -60px
-	//transform: rotate(-90deg)
-	line-height: 1
-	color: $accent
-	font-size: 1.5em
-	font-family: $second-font
 
 .scroll__text
 	transform: rotate(-90deg)
+	line-height: 1
+	font-size: 1.5em
+	font-family: $second-font
+	color: $accent
 
 .scroll__wheel
 	display: block
 	position: relative
 	border-radius: 10px
 	background-color: $accent
-	transform: translateY(-60px)
+	transform: translateY(-65px) translateX(1px)
 	width: 2px
-	height: 8px
+	height: 12px
 	top: 4px
 	margin-left: auto
 	margin-right: auto
 
 .scroll__wheel
 	animation-name: drop
-	animation-duration: 1s
+	animation-duration: 1.1s
 	animation-timing-function: linear
 	animation-delay: 0s
 	animation-iteration-count: infinite
@@ -192,19 +194,34 @@ body
 		top: 10px
 		opacity: 1
 	100%
-		top: 25px
+		top: 40px
 		opacity: 0
 
 .page-footer
-	display: flex
-	flex-direction: column
 	background-color: #010101
 	color: #ffffff
-	height: 100%
 	flex-basis: 50%
 	width: 50%
+	&__wrapper
+		box-sizing: border-box
+		padding-top: 3em
+		padding-bottom: 3em
+		display: flex
+		flex-direction: column
+		height: 100%
+		margin-right: 3em
+		margin-left: 3em
 	&__contacts
 		display: flex
+		justify-content: space-between
+	&__phone
+		text-decoration: none
+		color: $accent
+		font-size: 1.5em
+		transition: color 0.3s
+		&:hover
+			color: $accent-light
+
 
 .menu--footer
 	font-size: 1.5em
@@ -215,12 +232,12 @@ body
 	.menu__item
 		margin-right: 0
 
-
 .footer-photo
 	background-color: #dae5e7
 	height: 100%
 	flex-basis: 50%
 	width: 50%
+	// background-image: url("../img/spok.jpg")
 	img
 		width: 100%
 		height: 100%

@@ -543,6 +543,9 @@ body {
     .menu__link:hover {
       color: #f0c1c1; }
 
+.menu__item--current .menu__link {
+  color: #ff3127; }
+
 .page-header__greeting {
   font-family: "ProximaNova", "Roboto", sans-serif;
   text-transform: uppercase;
@@ -604,18 +607,17 @@ body {
 
 .scroll {
   position: absolute;
-  display: block;
   bottom: 70px;
-  right: -60px;
-  line-height: 1;
-  color: #ff3127;
-  font-size: 1.5em;
-  font-family: "ProximaNova", "Roboto", sans-serif; }
+  right: -60px; }
 
 .scroll__text {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
+          transform: rotate(-90deg);
+  line-height: 1;
+  font-size: 1.5em;
+  font-family: "ProximaNova", "Roboto", sans-serif;
+  color: #ff3127; }
 
 .scroll__wheel {
   display: block;
@@ -623,11 +625,11 @@ body {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   background-color: #ff3127;
-  -webkit-transform: translateY(-60px);
-      -ms-transform: translateY(-60px);
-          transform: translateY(-60px);
+  -webkit-transform: translateY(-65px) translateX(1px);
+      -ms-transform: translateY(-65px) translateX(1px);
+          transform: translateY(-65px) translateX(1px);
   width: 2px;
-  height: 8px;
+  height: 12px;
   top: 4px;
   margin-left: auto;
   margin-right: auto; }
@@ -635,8 +637,8 @@ body {
 .scroll__wheel {
   -webkit-animation-name: drop;
           animation-name: drop;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-delay: 0s;
@@ -654,7 +656,7 @@ body {
     top: 10px;
     opacity: 1; }
   100% {
-    top: 25px;
+    top: 40px;
     opacity: 0; } }
 
 @keyframes drop {
@@ -665,31 +667,51 @@ body {
     top: 10px;
     opacity: 1; }
   100% {
-    top: 25px;
+    top: 40px;
     opacity: 0; } }
 
 .page-footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: #010101;
   color: #ffffff;
-  height: 100%;
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
   width: 50%; }
+  .page-footer__wrapper {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    margin-right: 3em;
+    margin-left: 3em; }
   .page-footer__contacts {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .page-footer__phone {
+    text-decoration: none;
+    color: #ff3127;
+    font-size: 1.5em;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+    .page-footer__phone:hover {
+      color: #f0c1c1; }
 
 .menu--footer {
   font-size: 1.5em;
