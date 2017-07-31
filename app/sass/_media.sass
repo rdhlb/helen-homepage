@@ -9,18 +9,126 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.header-photo
+		display: none
+
+	.page-header
+		flex-basis: 100%
+		width: 100%
+
+	.scroll
+		right: -40px
+
+	.footer-photo
+		display: none
+
+	.page-footer
+		flex-basis: 100%
+		width: 100%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.slide__to-project
+		display: block
+		position: relative
+		margin-top: 30px
+		font-weight: 500
+		font-size: 1em
+		line-height: 1
+		text-decoration: none
+		color: $accent
+		svg
+			vertical-align: middle
+			margin-left: 7px
+	.slide__arrow-text
+		position: absolute
+		width: 1px
+		height: 1px
+		margin: -1px
+		padding: 0
+		overflow: hidden
+		clip: rect(0,0,0,0)
+		border: 0
 
+
+
+
+		// &::after
+		// 	content: ""
+		// 	background-image: url("../img/read-more-arrow.svg")
+		// 	position: absolute
+		// 	width: 20px
+		// 	height: 10px
+		// 	background-color: black
+		// 	top: 0
+		// 	right: 0
+
+
+	.slide__picture
+		display: none
+
+	.slide__project
+		flex-basis: 100%
+		width: 100%
+
+	.slide--project1
+		.slide__project
+			background-color: #bceed6
+
+	.slide--project2
+		.slide__project
+			background-color: #8fcbe6
+
+	.slide--project3
+		.slide__project
+			background-color: #fbff95
+
+	.slide--project4
+		.slide__project
+			background-color: #7079ef
+
+	.slide--project5
+		.slide__project
+			background-color: #ff8983
+
+	.page-footer__contacts
+		flex-wrap: wrap
+		justify-content: space-around
+
+	// Blur screenshot-background version: 
+	// .slide
+	// 	&__project
+	// 		position: relative
+	// 		&::before
+	// 			content: ""
+	// 			position: absolute
+	// 			top: 0
+	// 			left: 0
+	// 			width: 100%
+	// 			height: 100%
+	// 			background-repeat: no-repeat
+	// 			background-size: cover
+	// 			background-position: center
+	// 			transform: scale(1.2)
+	// 			filter: blur(5px)
+	// 			z-index: -1
+
+	// .slide--project1
+	// 	.slide__project
+	// 		&::before
+	// 			background-color: #bceed6
+	// 			background-image: url("../img/projects/may-foods.png")
+
+	// .slide--project2
+	// 	.slide__project
+	// 		&::before
+	// 			background-color: #8fcbe6
+	// 			background-image: url("../img/projects/fayna.png")
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

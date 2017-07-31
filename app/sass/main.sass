@@ -45,11 +45,13 @@ body
 .slide
 	height: 100vh
 	width: 100%
+	flex-basis: 100%
 	display: flex
 
 .page-header
 	flex-basis: 50%
 	width: 50%
+	height: 100%
 	background-color: #010101
 	color: #ffffff
 
@@ -212,6 +214,7 @@ body
 	color: #ffffff
 	flex-basis: 50%
 	width: 50%
+	height: 100%
 	&__wrapper
 		box-sizing: border-box
 		padding-top: 3em
@@ -256,6 +259,7 @@ body
 .slide__project
 	flex-basis: 50%
 	width: 50%
+	height: 100%
 
 .slide__wrapper
 	position: relative
@@ -365,38 +369,46 @@ body
 		right: 0
 		box-shadow: 0px 6px 16px 2px rgba(96,198,149,0.26)
 
-.slide__picture--project-1
-	background-color: #bceed6
-	//background-size: 800px
-	img
-		width: 452px
-		height: 564px
+.slide--project1
+	.slide__picture
+		background-color: #bceed6
+		//background-size: 800px
+		img
+			width: 452px
+			height: 564px
 
-.slide__picture--project-2
-	background-color: #8fcbe6
-	img
-		width: 642px
-		height: 380px
-		box-shadow: none
+.slide--project2
+	.slide__picture
+		background-color: #8fcbe6
+		img
+			width: 642px
+			height: 380px
+			box-shadow: none
 
-.slide__picture--project-3
-	background-color: #fbff95
-	img
-		width: 452px
-		height: 620px
+.slide--project3
+	.slide__picture
+		background-color: #fbff95
+		img
+			width: 452px
+			height: 620px
 
-.slide__picture--project-4
-	background-color: #7079ef
-	img
-		width: 710px
-		height: 410px
-		box-shadow: none
+.slide--project4
+	.slide__picture
+		background-color: #7079ef
+		img
+			width: 710px
+			height: 410px
+			box-shadow: none
 
-.slide__picture--project-5
-	background-color: #ff8983
-	img
-		width: 540px
-		height: 530px
-		box-shadow: 0px 6px 16px 2px rgba(194,66,59,1)
+.slide--project5
+	.slide__picture
+		background-color: #ff8983
+		img
+			width: 540px
+			height: 530px
+			box-shadow: 0px 6px 16px 2px rgba(194,66,59,1)
+
+.slide__to-project
+	display: none
 
 @import "media" // Всегда в конце
