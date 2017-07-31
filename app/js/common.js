@@ -12,7 +12,10 @@ changeImgToBackground('footer-photo');
 
 // mmenu initialization: 
 var $menu = $("#my-menu").mmenu({
-   //   options
+  extensions: ['theme-dark', 'border-none', 'listview-huge'],
+  navbar: {
+			title: 'Menu'
+		}
 });
 
 var $icon = $("#hamburger");
