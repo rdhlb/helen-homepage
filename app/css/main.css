@@ -4995,11 +4995,9 @@ body {
     display: block; }
   .mmenu-toggle {
     text-decoration: none;
-    color: #fff; }
-  .page-header .social-links {
-    margin-bottom: 50px; }
-  .scroll {
-    bottom: 120px; }
+    color: #ffffff; }
+  .page-header__wrapper {
+    height: 93%; }
   .page-footer__contacts {
     margin-bottom: 30px; } }
 
