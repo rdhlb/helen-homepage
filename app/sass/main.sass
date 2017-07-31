@@ -112,6 +112,18 @@ body
 	.menu__link
 		color: $accent
 
+.page-header__mmenu-toggle
+	display: none
+
+.menu-mobile:not( .mm-menu )
+	display: none;
+
+.hamburger
+	padding: 0
+	.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+		background-color: #ffffff
+		border-radius: 2px
+
 .page-header
 	&__greeting
 		font-family: $second-font
@@ -410,5 +422,8 @@ body
 
 .slide__to-project
 	display: none
+
+
+
 
 @import "media" // Всегда в конце

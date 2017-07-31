@@ -39,7 +39,7 @@
 		text-decoration: none
 		color: $accent
 		svg
-			vertical-align: middle
+			vertical-align: bottom
 			margin-left: 7px
 	.slide__arrow-text
 		position: absolute
@@ -50,20 +50,6 @@
 		overflow: hidden
 		clip: rect(0,0,0,0)
 		border: 0
-
-
-
-
-		// &::after
-		// 	content: ""
-		// 	background-image: url("../img/read-more-arrow.svg")
-		// 	position: absolute
-		// 	width: 20px
-		// 	height: 10px
-		// 	background-color: black
-		// 	top: 0
-		// 	right: 0
-
 
 	.slide__picture
 		display: none
@@ -95,6 +81,18 @@
 	.page-footer__contacts
 		flex-wrap: wrap
 		justify-content: space-around
+	
+	.page-header
+		.menu
+			display: none
+
+	.page-header__mmenu-toggle
+		display: block
+		margin-bottom: auto
+
+	.mmenu-toggle
+		text-decoration: none
+		color: #fff
 
 	// Blur screenshot-background version: 
 	// .slide

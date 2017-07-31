@@ -23,189 +23,205 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #f5f5f5; }</style>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-	<article class="slide">
-		<header class="page-header">
-			<div class="page-header__wrapper">
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item menu__item--current">
-							<a href="#" class="menu__link">Home</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Projects</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">About me</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Contacts</a>
-						</li>
-					</ul>
-				</nav>
+	<div id="fullpage">
+		<div class="section">
+			<article class="slide">
+				<header class="page-header">
+					<div class="page-header__wrapper">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item menu__item--current">
+									<a href="#" class="menu__link">Home</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Projects</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">About me</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
 
-				<b class="page-header__greeting">Hello, everyone!</b>
-				<h1 class="page-header__about-me">My name is Elena<br> I'm a UX/UI Designer<span>.</span></h1>
+						<b class="page-header__greeting">Hello, everyone!</b>
+						<h1 class="page-header__about-me">My name is Elena<br> I'm a UX/UI Designer<span>.</span></h1>
 
-				<div class="social-links">
-					<a class="social-link social-link--fb" target="_blank" href="https://www.facebook.com/elenavalerynayda"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#facebook-app-symbol" /></svg><span class="social-link__text">Я в Facebook</span></a>
-					<a class="social-link social-link--be" target="_blank" href="http://t.me/@elena_valery"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#telegram" /><span class="social-link__text">Я на Behance</span></a>
-					<a class="social-link social-link--tg" target="_blank" href="https://www.behance.net/elenavaler98d4"><svg width="20" height="20"><use xlink:href="img/social-icons.svg#behance" /><span class="social-link__text">Я в Telegram</span></a>
-				</div>
-				
-				<div class="scroll">
-					<div class="scroll__wheel"></div><div class="scroll__text">Scroll</div>
-				</div>
-			</div>
-		</header>
+						<div class="social-links">
+							<a class="social-link social-link--fb" target="_blank" href="https://www.facebook.com/elenavalerynayda"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#facebook-app-symbol" /></svg><span class="social-link__text">Я в Facebook</span></a>
+							<a class="social-link social-link--be" target="_blank" href="http://t.me/@elena_valery"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#telegram" /></svg><span class="social-link__text">Я на Behance</span></a>
+							<a class="social-link social-link--tg" target="_blank" href="https://www.behance.net/elenavaler98d4"><svg width="20" height="20"><use xlink:href="img/social-icons.svg#behance" /></svg><span class="social-link__text">Я в Telegram</span></a>
+						</div>
 
-		<div id="header-photo" class="header-photo">
-			<img src="img/portrait.jpg" width="683" height="768" alt="Портрет Елены">
-		</div>
-	</article>
-
-	<article class="slide">
-		<div class="slide__project">
-			<div class="slide__wrapper">
-				<h2 class="slide__title">Intramay May-Foods<br> Europe</h2>
-				<b class="slide__project-type">CRM</b>
-				<p class="slide__description">Внутренняя корпоративная CRM разработана для компании «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
-			</div>
-		</div>
-
-		<div id="project-1" class="slide__picture slide__picture--project-1">
-			<a href="#" class="btn btn--center">
-				<span class="btn__text">To project</span>
-				<span class="btn__arrow btn__arrow--top"></span>
-				<span class="btn__arrow btn__arrow--bottom"></span>
-			</a>
-
-			<img src="img/projects/may-foods.png" width="803" height="1000" alt="May-foods Project">
-		</div>
-	</article>
-
-	<article class="slide">
-		<div class="slide__project">
-		<div class="slide__wrapper">
-				<h2 class="slide__title">Fayna town</h2>
-				<b class="slide__project-type">WEB mobile</b>
-				<p class="slide__description">Внутренняя корпоративная CRM разработана для компании «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
-			</div>
-		</div>
-
-		<div class="slide__picture slide__picture--project-2">
-			<a href="#" class="btn btn--center">
-				<span class="btn__text">To project</span>
-				<span class="btn__arrow btn__arrow--top"></span>
-				<span class="btn__arrow btn__arrow--bottom"></span>
-			</a>
-
-			<img src="img/projects/fayna.png" width="1000" height="596" alt="Fayna Town project">
-		</div>
-	</article>
-
-	<article class="slide">
-		<div class="slide__project">
-		<div class="slide__wrapper">
-				<h2 class="slide__title">e-space</h2>
-				<b class="slide__project-type">ux/ui</b>
-				<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
-			</div>
-		</div>
-
-		<div class="slide__picture slide__picture--project-3">
-			<a href="#" class="btn btn--center">
-				<span class="btn__text">To project</span>
-				<span class="btn__arrow btn__arrow--top"></span>
-				<span class="btn__arrow btn__arrow--bottom"></span>
-			</a>
-
-			<img src="img/projects/e-space.png" width="744" height="1024" alt="E-Space project">
-		</div>
-	</article>
-
-	<article class="slide">
-		<div class="slide__project">
-		<div class="slide__wrapper">
-				<h2 class="slide__title">e-space</h2>
-				<b class="slide__project-type">ux/ui</b>
-				<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
-			</div>
-		</div>
-
-		<div class="slide__picture slide__picture--project-4">
-			<a href="#" class="btn btn--center">
-				<span class="btn__text">To project</span>
-				<span class="btn__arrow btn__arrow--top"></span>
-				<span class="btn__arrow btn__arrow--bottom"></span>
-			</a>
-
-			<img src="img/projects/food-app.png" width="1000" height="586" alt="">
-		</div>
-	</article>
-
-	<article class="slide">
-		<div class="slide__project">
-		<div class="slide__wrapper">
-				<h2 class="slide__title">e-space</h2>
-				<b class="slide__project-type">ux/ui</b>
-				<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
-			</div>
-		</div>
-
-		<div class="slide__picture slide__picture--project-5">
-			<a href="#" class="btn btn--center">
-				<span class="btn__text">To project</span>
-				<span class="btn__arrow btn__arrow--top"></span>
-				<span class="btn__arrow btn__arrow--bottom"></span>
-			</a>
-
-			<img src="img/projects/street-burgers.png" width="1000" height="972" alt="">
-		</div>
-	</article>
-
-	<article class="slide">
-		<footer class="page-footer">
-			<div class="page-footer__wrapper">
-				<nav class="menu menu--footer">
-					<ul class="menu__list menu__list--footer">
-						<li class="menu__item menu__item--current">
-							<a href="#" class="menu__link">Home</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Projects</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">About me</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Contacts</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Contacts</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="page-footer__contacts">
-					<div class="social-links">
-						<a class="social-link social-link--fb" target="_blank" href="https://www.facebook.com/elenavalerynayda"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#facebook-app-symbol" /></svg><span class="social-link__text">Я в Facebook</span></a>
-						<a class="social-link social-link--be" target="_blank" href="http://t.me/@elena_valery"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#telegram" /><span class="social-link__text">Я на Behance</span></a>
-						<a class="social-link social-link--tg" target="_blank" href="https://www.behance.net/elenavaler98d4"><svg width="20" height="20"><use xlink:href="img/social-icons.svg#behance" /><span class="social-link__text">Я в Telegram</span></a>
+						<div class="scroll">
+							<div class="scroll__wheel"></div><div class="scroll__text">Scroll</div>
+						</div>
 					</div>
+				</header>
 
-					<a href="tel:+380973772083" class="page-footer__phone">+380 (097) 377 2083</a>
+				<div id="header-photo" class="header-photo">
+					<img src="img/portrait.jpg" width="683" height="768" alt="Портрет Елены">
 				</div>
-			</div>
-		</footer>
-
-		<div id="footer-photo" class="footer-photo">
-			<img src="img/spok.jpg" width="683" height="768" alt="Фото Спока">
+			</article>
 		</div>
-	</article>
 
+		<div class="section">
+			<article class="slide slide--project1">
+				<div class="slide__project">
+					<div class="slide__wrapper">
+						<h2 class="slide__title">Intramay May-Foods<br> Europe</h2>
+						<b class="slide__project-type">CRM</b>
+						<p class="slide__description">CRM for «Май foods» company. Внутренняя корпоративная CRM разработана для компании «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
+						<a href="#" class="slide__to-project">Read more <svg width="45" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.5 14.39"><defs><style>.cls-1{fill:none;stroke:#ff3127;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Ресурс 1</title><g id="Слой_2" data-name="Слой 2"><g id="bg"><polyline class="cls-1" points="1 7.2 27.57 7.2 48.5 7.2"/><polyline class="cls-1" points="36.48 1 48.5 7.25 36.67 13.39"/></g></g></svg><span class="slide__arrow-text">&rarr;</span></a>
+					</div>
+				</div>
+
+				<div id="project-1" class="slide__picture">
+					<a href="#" class="btn btn--center">
+						<span class="btn__text">To project</span>
+						<span class="btn__arrow btn__arrow--top"></span>
+						<span class="btn__arrow btn__arrow--bottom"></span>
+					</a>
+
+					<img src="img/projects/may-foods.png" width="803" height="1000" alt="May-foods Project">
+				</div>
+			</article>
+		</div>
+
+		<div class="section">
+			<article class="slide slide--project2">
+				<div class="slide__project">
+					<div class="slide__wrapper">
+						<h2 class="slide__title">Fayna town</h2>
+						<b class="slide__project-type">WEB mobile</b>
+						<p class="slide__description">Внутренняя корпоративная CRM разработана для компании «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
+					</div>
+				</div>
+
+				<div class="slide__picture">
+					<a href="#" class="btn btn--center">
+						<span class="btn__text">To project</span>
+						<span class="btn__arrow btn__arrow--top"></span>
+						<span class="btn__arrow btn__arrow--bottom"></span>
+					</a>
+
+					<img src="img/projects/fayna.png" width="1000" height="596" alt="Fayna Town project">
+				</div>
+			</article>
+		</div>
+
+		<div class="section">
+			<article class="slide slide--project3">
+				<div class="slide__project">
+					<div class="slide__wrapper">
+						<h2 class="slide__title">e-space</h2>
+						<b class="slide__project-type">ux/ui</b>
+						<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
+					</div>
+				</div>
+
+				<div class="slide__picture">
+					<a href="#" class="btn btn--center">
+						<span class="btn__text">To project</span>
+						<span class="btn__arrow btn__arrow--top"></span>
+						<span class="btn__arrow btn__arrow--bottom"></span>
+					</a>
+
+					<img src="img/projects/e-space.png" width="744" height="1024" alt="E-Space project">
+				</div>
+			</article>
+		</div>
+
+		<div class="section">
+			<article class="slide slide--project4">
+				<div class="slide__project">
+					<div class="slide__wrapper">
+						<h2 class="slide__title">e-space</h2>
+						<b class="slide__project-type">ux/ui</b>
+						<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
+					</div>
+				</div>
+
+				<div class="slide__picture">
+					<a href="#" class="btn btn--center">
+						<span class="btn__text">To project</span>
+						<span class="btn__arrow btn__arrow--top"></span>
+						<span class="btn__arrow btn__arrow--bottom"></span>
+					</a>
+
+					<img src="img/projects/food-app.png" width="1000" height="586" alt="">
+				</div>
+			</article>
+		</div>
+
+		<div class="section">
+			<article class="slide slide--project5">
+				<div class="slide__project">
+					<div class="slide__wrapper">
+						<h2 class="slide__title">e-space</h2>
+						<b class="slide__project-type">ux/ui</b>
+						<p class="slide__description">Внутренне корпоративный портал разработан для компании-родителя «Май foods». Данная компания производит такие торговые марки чаев, как: urtis, Майский, Лисма и другие.</p>
+					</div>
+				</div>
+
+				<div class="slide__picture">
+					<a href="#" class="btn btn--center">
+						<span class="btn__text">To project</span>
+						<span class="btn__arrow btn__arrow--top"></span>
+						<span class="btn__arrow btn__arrow--bottom"></span>
+					</a>
+
+					<img src="img/projects/street-burgers.png" width="1000" height="972" alt="">
+				</div>
+			</article>
+		</div>
+
+		<div class="section">
+			<article class="slide">
+				<footer class="page-footer">
+					<div class="page-footer__wrapper">
+						<nav class="menu menu--footer">
+							<ul class="menu__list menu__list--footer">
+								<li class="menu__item menu__item--current">
+									<a href="#" class="menu__link">Home</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Projects</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">About me</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Contacts</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="page-footer__contacts">
+							<div class="social-links">
+								<a class="social-link social-link--fb" target="_blank" href="https://www.facebook.com/elenavalerynayda"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#facebook-app-symbol" /></svg><span class="social-link__text">Я в Facebook</span></a>
+								<a class="social-link social-link--be" target="_blank" href="http://t.me/@elena_valery"><svg width="18" height="18"><use xlink:href="img/social-icons.svg#telegram" /></svg><span class="social-link__text">Я на Behance</span></a>
+								<a class="social-link social-link--tg" target="_blank" href="https://www.behance.net/elenavaler98d4"><svg width="20" height="20"><use xlink:href="img/social-icons.svg#behance" /></svg><span class="social-link__text">Я в Telegram</span></a>
+							</div>
+
+							<a href="tel:+380973772083" class="page-footer__phone">+380 (097) 377 2083</a>
+						</div>
+					</div>
+				</footer>
+
+				<div id="footer-photo" class="footer-photo">
+					<img src="img/spok.jpg" width="683" height="768" alt="Фото Спока">
+				</div>
+			</article>
+		</div>
+	</div>
 
 
 	<script src="js/libs.min.js"></script>
