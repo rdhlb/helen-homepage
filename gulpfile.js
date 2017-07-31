@@ -19,7 +19,8 @@ gulp.task('sass', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js'
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/fullpage.js/dist/jquery.fullpage.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
