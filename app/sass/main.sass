@@ -78,7 +78,7 @@ body
 	img
 		width: 100%
 		height: 100%
-		object-fit: cover //don't forget to apply polyfill to project
+		object-fit: cover // in case when JS off
 
 .menu
 	line-height: 1
@@ -444,5 +444,8 @@ body
 
 .slide__link-wrapper
 	text-decoration: none
+
+.photo-mobile
+	display: none
 
 @import "media" // Всегда в конце
