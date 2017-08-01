@@ -13,7 +13,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 		.pipe(autoprefixer('last 15 versions'))
-		.pipe(cleanCSS())
+		// .pipe(cleanCSS()) // before activate don't forget to install this package
 		.pipe(gulp.dest('app/css/'))
 		.pipe(browserSync.reload({stream: true}))
 });
