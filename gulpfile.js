@@ -7,13 +7,14 @@ del = require('del'),
 imagemin = require('gulp-imagemin'),
 cache = require('gulp-cache'),
 autoprefixer = require('gulp-autoprefixer'),
-notify = require('gulp-notify');
+notify = require('gulp-notify'),
+cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(autoprefixer('last 15 versions'))
-		// .pipe(cleanCSS()) // before activate don't forget to install this package
+		.pipe(cleanCSS())
 		.pipe(gulp.dest('app/css/'))
 		.pipe(browserSync.reload({stream: true}))
 	});
