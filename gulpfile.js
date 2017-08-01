@@ -1,22 +1,22 @@
 var gulp = require('gulp'),
-		sass = require('gulp-sass'),
-		browserSync = require('browser-sync'),
-		concat = require('gulp-concat'),
-		uglify = require('gulp-uglify'),
-		del = require('del'),
-		imagemin = require('gulp-imagemin'),
-		cache = require('gulp-cache'),
-		autoprefixer = require('gulp-autoprefixer'),
-		notify = require('gulp-notify');
+sass = require('gulp-sass'),
+browserSync = require('browser-sync'),
+concat = require('gulp-concat'),
+uglify = require('gulp-uglify'),
+del = require('del'),
+imagemin = require('gulp-imagemin'),
+cache = require('gulp-cache'),
+autoprefixer = require('gulp-autoprefixer'),
+notify = require('gulp-notify');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
-		.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-		.pipe(autoprefixer('last 15 versions'))
+	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+	.pipe(autoprefixer('last 15 versions'))
 		// .pipe(cleanCSS()) // before activate don't forget to install this package
 		.pipe(gulp.dest('app/css/'))
 		.pipe(browserSync.reload({stream: true}))
-});
+	});
 
 gulp.task('scripts', function() {
 	return gulp.src([
@@ -24,9 +24,9 @@ gulp.task('scripts', function() {
 		'app/libs/fullpage.js/dist/jquery.fullpage.min.js',
 		'app/libs/mmenu/dist/jquery.mmenu.all.js'
 		])
-		.pipe(concat('libs.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('app/js'));
+	.pipe(concat('libs.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js'));
 });
 
 gulp.task('browser-sync', function() {
@@ -42,9 +42,9 @@ gulp.task('removedist', function() {
 	return del.sync('dist');
 });
 
-gulp.task('clearcache', function () { 
-	return cache.clearAll(); 
-});
+// gulp.task('clearcache', function () { 
+// 	return cache.clearAll(); 
+// });
 
 gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
@@ -54,20 +54,25 @@ gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin()))
+	.pipe(imagemin([
+		imagemin.gifsicle({interlaced: true}),
+		imagemin.jpegtran({progressive: true}),
+		imagemin.optipng({optimizationLevel: 5}),
+		imagemin.svgo({plugins: [{removeViewBox: true}, {cleanupIDs: false}]})
+		]))
 	.pipe(gulp.dest('dist/img')); 
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src('app/css/main.css')
-		.pipe(gulp.dest('dist/css'));
+	.pipe(gulp.dest('dist/css'));
 
 	var buildFonts = gulp.src('app/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'));
+	.pipe(gulp.dest('dist/fonts'));
 
 	var buildJs = gulp.src('app/js/**/*')
-		.pipe(gulp.dest('dist/js'));
+	.pipe(gulp.dest('dist/js'));
 
 	var buildHtml = gulp.src([
 		'app/*.html',
