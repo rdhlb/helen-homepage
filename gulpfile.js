@@ -57,7 +57,10 @@ gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
 	.pipe(imagemin([
 		imagemin.gifsicle({interlaced: true}),
-		imagemin.jpegtran({progressive: true}),
+		imagemin.jpegtran({
+			progressive: false,
+			arithmetic: true
+		}),
 		imagemin.optipng({optimizationLevel: 5}),
 		imagemin.svgo({plugins: [{removeViewBox: true}, {cleanupIDs: false}]})
 		]))
