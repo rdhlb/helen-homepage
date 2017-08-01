@@ -13,6 +13,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 		.pipe(autoprefixer('last 15 versions'))
+		.pipe(cleanCSS())
 		.pipe(gulp.dest('app/css/'))
 		.pipe(browserSync.reload({stream: true}))
 });
@@ -68,8 +69,10 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 	var buildJs = gulp.src('app/js/**/*')
 		.pipe(gulp.dest('dist/js'));
 
-	var buildHtml = gulp.src('app/*.html')
-		.pipe(gulp.dest('dist'));
+	var buildHtml = gulp.src([
+		'app/*.html',
+		'app/.htaccess',
+		]).pipe(gulp.dest('dist'));
 
 });
 
