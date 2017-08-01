@@ -43,9 +43,9 @@ gulp.task('removedist', function() {
 	return del.sync('dist');
 });
 
-// gulp.task('clearcache', function () { 
-// 	return cache.clearAll(); 
-// });
+gulp.task('clearcache', function () { 
+	return cache.clearAll(); 
+});
 
 gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
@@ -58,8 +58,7 @@ gulp.task('imagemin', function() {
 	.pipe(imagemin([
 		imagemin.gifsicle({interlaced: true}),
 		imagemin.jpegtran({
-			progressive: false,
-			arithmetic: true
+			progressive: true
 		}),
 		imagemin.optipng({optimizationLevel: 5}),
 		imagemin.svgo({plugins: [{removeViewBox: true}, {cleanupIDs: false}]})
