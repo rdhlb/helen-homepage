@@ -77,7 +77,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 
 	var buildHtml = gulp.src([
 		'app/*.html',
-		'app/.htaccess',
+		'app/.htaccess'
 		]).pipe(gulp.dest('dist'));
 
 });
