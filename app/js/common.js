@@ -9,7 +9,6 @@ const changeImgToBackground = (elementId) => {
 changeImgToBackground('header-photo');
 changeImgToBackground('footer-photo');
 
-
 // mmenu initialization: 
 var $menu = $("#my-menu").mmenu({
   extensions: ['theme-dark', 'border-none', 'listview-huge'],
