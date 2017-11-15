@@ -8,16 +8,17 @@ imagemin = require('gulp-imagemin'),
 cache = require('gulp-cache'),
 autoprefixer = require('gulp-autoprefixer'),
 notify = require('gulp-notify'),
-cleanCSS = require('gulp-clean-css');
+cleanCSS = require('gulp-clean-css'),
+critical = require('critical');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(autoprefixer('last 15 versions'))
-		.pipe(cleanCSS())
-		.pipe(gulp.dest('app/css/'))
-		.pipe(browserSync.reload({stream: true}))
-	});
+	.pipe(cleanCSS())
+	.pipe(gulp.dest('app/css/'))
+	.pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('scripts', function() {
 	return gulp.src([
@@ -82,6 +83,23 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 		'app/.htaccess'
 		]).pipe(gulp.dest('dist'));
 
+});
+
+gulp.task('critical', function () {
+	critical.generate({
+		inline: true,
+		base: 'dist/',
+		src: 'index.html',
+		dest: 'index-critical.html',
+		minify: true,
+		dimensions: [{
+        height: 800,
+        width: 480
+    }, {
+        height: 800,
+        width: 1400
+    }]
+	});
 });
 
 gulp.task('default', ['watch']);
