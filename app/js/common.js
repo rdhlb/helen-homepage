@@ -37,9 +37,12 @@ API.bind( "close:finish", function() {
 });
 
 
-// fullpage initialization:
+// // fullpage initialization:
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		verticalCentered: false
+		verticalCentered: false,
+		loopBottom: true,
+		scrollBar: true,
+		responsiveWidth: 768,
 	});
 });
