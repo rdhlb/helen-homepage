@@ -26,7 +26,7 @@ API.bind( "close:finish", function() {
 });
 
 $(document).ready(function() {
-	if(screen.width > 1024) {
+	if (screen.width > 1024) {
 		//mobile            
 		$('#fullpage').fullpage({
 			verticalCentered: false,
