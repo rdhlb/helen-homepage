@@ -35,14 +35,3 @@ API.bind( "close:finish", function() {
       $icon.removeClass( "is-active" );
    }, 10);
 });
-
-
-// // fullpage initialization:
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		verticalCentered: false,
-		loopBottom: true,
-		scrollBar: true,
-		responsiveWidth: 768,
-	});
-});
