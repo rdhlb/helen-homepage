@@ -43,9 +43,3 @@ $(document).ready(function() {
 		verticalCentered: false
 	});
 });
-
-//	hide preloader
-$(window).on('load', function() {
-	$('.preloader').delay(1000).fadeOut('slow');
-});
-
